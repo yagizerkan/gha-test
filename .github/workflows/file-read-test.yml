@@ -4,12 +4,13 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Read README.md
-        id: package
-        uses: juliangruber/read-file-action@v1
+      - name: Get XML
+        id: getxml
+        uses: mavrosxristoforos/get-xml-info@1.0
         with:
-          path: ./README.md
-      - name: Echo README.md
-        run: echo "${{ steps.package.outputs.content }}"
+          xml-file: './xml/sample.xml'
+          xpath: '//string'
+      - name: Echo XML
+        run: echo "${{ steps.getxml.outputs.content }}"
