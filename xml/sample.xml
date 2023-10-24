@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Insider</string>
+
+    <item name="button_position" type="id" />
+
+    <string name="insider_session_start">https://mobile.useinsider.com/api/v3/session/start</string>
+</resources>
