@@ -13,4 +13,4 @@ jobs:
           xml-file: './xml/sample.xml'
           xpath: '//string'
       - name: Echo XML
-        run: echo "${{ steps.getxml.outputs.content }}"
+        run: echo "${{ steps.getxml.outputs.info }}"
